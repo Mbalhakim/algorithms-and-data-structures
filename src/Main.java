@@ -1,15 +1,29 @@
+import java.util.Random;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        BinarySearch binarySearch = new BinarySearch();
+        LinearSearch linearSearch = new LinearSearch();
+        RecursiveBinarySearch recursiveBinarySearch = new RecursiveBinarySearch();
+        CreateRangedList createRangedList = new CreateRangedList();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+        Random rand = new Random();
+        int listSize = rand.nextInt(6, 20);
+
+        int[] list =CreateRangedList.newList(1, listSize);
+        int target = rand.nextInt(0, list.length);
+
+        int[] unsortedList = {5, 3, 5, 1, 5, 6, 5, 6, 9, 8, 4, 33, 3, 2, 5, 4, 8, 7, 6, 9, 10};
+
+
+//        int[] list2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
+//        System.out.println(RecursiveBinarySearch.recursiveBinarySearch(list2, 5)); // true
+//        System.out.println(RecursiveBinarySearch.recursiveBinarySearch(list2, 12)); // false
+
+       binarySearch.binarySearch(list, target);
+
     }
+
 }
