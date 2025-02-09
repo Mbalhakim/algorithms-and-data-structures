@@ -8,7 +8,7 @@ public class BinarySearch {
     static int binarySearch(int[] list, int target) {
         int first = 0;
         int last = list.length - 1;
-        int tries = 1;
+        int tries = 0;
         while (first <= last) {
             int midpoint = (first + last) / 2;
 

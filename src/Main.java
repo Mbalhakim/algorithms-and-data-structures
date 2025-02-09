@@ -16,13 +16,13 @@ public class Main {
         int target = rand.nextInt(0, list.length);
 
         int[] unsortedList = {5, 3, 5, 1, 5, 6, 5, 6, 9, 8, 4, 33, 3, 2, 5, 4, 8, 7, 6, 9, 10};
+        int[] sortedLit = {1,2,3,4};
 
 
-//        int[] list2 = {1, 2, 3, 4, 5, 6, 7, 8, 9};
-//        System.out.println(RecursiveBinarySearch.recursiveBinarySearch(list2, 5)); // true
-//        System.out.println(RecursiveBinarySearch.recursiveBinarySearch(list2, 12)); // false
 
-       binarySearch.binarySearch(list, target);
+
+       binarySearch.binarySearch(sortedLit, 2);
+       linearSearch.linearSearch(unsortedList, 9);
 
     }
 
